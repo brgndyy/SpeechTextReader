@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(243, 196, 196, 0.691);
+}
+
+.container{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container h1{
+    text-align: center;
+}
+
+.toggleBtn{
+    padding: 15px;
+    border: none;
+    background-color: rgb(215, 109, 122);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+
+.text-box{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(204, 101, 101);
+    position: fixed;
+    top: -300;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    transform: translateY(-300px);
+    transition: transform 0.5s ease-in;
+
+}
+
+.text-box select{
+    background-color: rgb(247, 221, 221);
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.text-box select:focus{
+    outline: 0;
+}
+
+.text-box textarea{
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.text-box textarea:focus{
+    outline: 0;
+}
+
+.readBtn{
+    padding: 10px;
+    border: none;
+    background-color: rgb(168, 63, 63);
+    color: rgb(247, 247, 247);
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.closeBtn{
+    cursor: pointer;
+    position: absolute;
+    right: 20;
+}
+
+.text-box.show{
+    animation: down 0.3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.box.clicked{
+    box-shadow: 10px 10px 10px rgb(237, 187, 187)
+}
+
+.box img{
+    width: 300px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box p{
+    text-align: center;
+    background-color: rgb(229, 124, 124);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+@keyframes down {
+    from{
+        transform: translateY(-300px);
+    } to{
+        transform: translateY(600px);
+    }
+}
+
+
+@keyframes up {
+    from{
+        transform: translateY(600px);
+    } to{
+        transform: translateY(-300px);
+    }
+}

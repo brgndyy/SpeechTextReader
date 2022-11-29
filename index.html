@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <title>Speech Text Reader</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Speech Text Reader</h1>
+        <button id="toggleBtn" class="toggleBtn">Toggle Text Box</button>
+        <div class="text-box" id="text-box">
+            <div class="closeBtn" id="closeBtn">X</div>
+            <h3>Choose Voice</h3>
+            <select id="voicesEl"></select>
+            <textarea id="text" placeholder="Enter text to read..."></textarea>
+            <button id="readBtn" class="readBtn">Read Text</button>
+        </div>
+        <main id="mainBox">
+
+        </main>
+    </div>
+</body>
+
+</html>
